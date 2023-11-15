@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: grey;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <button id="fun" onclick="clicar()" ondblclick="xx()">funciomnal</button>
+    <script>
+        function somar() {
+            var tn1 = document.getElementById("txtn1")
+            var tn2 = document.getElementById("txtn2")
+            var res = document.getElementById(`res`)
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `a soma entre ${n1} e ${n2} e ${s}` 
+        }
+
+        function clicar() {
+            var a = document.getElementById("fun")
+            a.style.background = "blue"
+        }
+        function xx() {
+            var a = document.getElementById("fun")
+            a.style.background = "pink"
+        }
+    </script>
+    
+</body>
+</html>
